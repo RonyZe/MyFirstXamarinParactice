@@ -1,19 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<CarouselPage
+<ContentPage
+             Padding="40"
              xmlns:local="clr-namespace:HelloWorld"
              xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"      
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:extensions="clr-namespace:HelloWorld.Extensions;assembly=HelloWorld.Android"
              x:Class="HelloWorld.MainPage">
+
+    <TableView>
+        <TableRoot>
+            <TableSection Title="Basics">
+                <TextCell Text="Name" Detail="Ali Raza"  />
+                <EntryCell Label="Title" Placeholder=" (eg  Shopping)" />
+                <SwitchCell Text="Notifications" On="True" />
+                
+                <extensions:DateCell Label="Starts" />
+                <extensions:DateCell Label="Ends" />
+
+                <ViewCell Tapped="Cell_OnTapped">
+                    <StackLayout Orientation="Horizontal" Padding="13, 5">
+                        <Label Text="Contact Method"  VerticalOptions="Center"/>
+                        <Label 
+                            x:Name="contactMethod"
+                            VerticalOptions="Center"
+                            HorizontalOptions="EndAndExpand"
+                            Text="None"
+                            TextColor="Gray"
+                            />
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+            
+        </TableRoot>
+    </TableView>
+
+
+    <!-- <StackLayout> -->
+    <!--     <DatePicker Date="{x:Static sys:DateTime.Today}"  Format="d MMM yyyy" DateSelected="DatePicker_OnDateSelected" /> -->
+    <!--     <TimePicker Time="13:00" /> -->
+    <!-- </StackLayout> -->
+
+    <!-- <StackLayout> -->
+    <!--     <Picker x:Name="contactMethods" Title="Contact Method" SelectedIndexChanged="Picker_OnSelectedIndexChanged"> -->
+    <!--         ~1~ <Picker.Items> @1@ -->
+    <!--         ~1~     <x:String>SMS</x:String> @1@ -->
+    <!--         ~1~     <x:String>Email</x:String> @1@ -->
+    <!--         ~1~ </Picker.Items> @1@ -->
+    <!--     </Picker> -->
+    <!-- </StackLayout> -->
+
+
+    <!-- <StackLayout BackgroundColor="DarkBlue"> -->
+    <!--     <Editor BackgroundColor="BlueViolet" VerticalOptions="FillAndExpand" /> -->
+    <!-- </StackLayout> -->
+
+    <!-- <StackLayout> -->
+<!--         <Entry Keyboard="Numeric" Placeholder="Phone" /> -->
+<!--         <Entry IsPassword="True" Placeholder="Password" TextChanged="Entry_OnTextChanged" /> -->
+<!--         <Label x:Name="label" /> -->
+<!--     </StackLayout> -->
+
+
+ <!-- <StackLayout>  -->
+ <!--     <Slider x:Name="slider" Minimum="0" Maximum="2555" />  -->
+ <!--         <Label HorizontalOptions="Center" Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:N0}'}" />  -->
+ <!--     </StackLayout>  -->
+
+    <!-- <StackLayout> -->
+    <!--     <Stepper x:Name="stepper" Increment="5" Minimum="0" Maximum="2555" /> -->
+    <!--     <Label Text="{Binding Source={x:Reference stepper}, Path=Value }" /> -->
+    <!-- </StackLayout> -->
+
+
+    <!-- <StackLayout> -->
+    <!--     <Switch IsToggled="True" x:Name="switch" HorizontalOptions="Center" /> -->
+    <!-- <Label HorizontalOptions="Center" Text="Content" IsVisible="{Binding Source={x:Reference switch}, Path=IsToggled}" /> -->
+    <!-- </StackLayout> -->
+
+
+    <!-- <ContentPage.ToolbarItems> -->
+  <!--   <ToolbarItem Icon="plus.png" Text="New" Clicked="MenuItem_OnClicked" Order="Primary" /> -->
+  <!--   <ToolbarItem Icon="plus.png" Text="New" Clicked="MenuItem_OnClicked" Order="Secondary" /> -->
+  <!-- </ContentPage.ToolbarItems> -->
+
+    <!-- <StackLayout HorizontalOptions="Center" VerticalOptions="Center"> -->
+    <!--     <Button Text="Click Me" Clicked="Button_OnClicked" /> -->
+    <!-- </StackLayout> -->
+    
+            
+
             
       <!-- <local:ContactsPage Title="Contacts" Icon="clock.png" /> -->
 
-    <ContentPage>
-        <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center" />
-    </ContentPage>
-
-      <ContentPage>
-          <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center" />
-      </ContentPage>
+    <!-- <ContentPage> -->
+    <!--     <Label Text="Content of Page1" HorizontalOptions="Center" VerticalOptions="Center" /> -->
+    <!-- </ContentPage> -->
+    <!-- -->
+    <!--   <ContentPage> -->
+    <!--       <Label Text="Content of Page2" HorizontalOptions="Center" VerticalOptions="Center" /> -->
+    <!--   </ContentPage> -->
 
     <!-- <NavigationPage Title="Page1" Icon="clock.png"> -->
     <!--     <x:Arguments> -->
@@ -28,4 +114,4 @@
     <!-- </ContentPage>   -->
     
 
-</CarouselPage>
+</ContentPage>

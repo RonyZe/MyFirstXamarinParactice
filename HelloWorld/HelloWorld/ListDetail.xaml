@@ -1,15 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelloWorld.ListDetail">
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             x:Class="HelloWorld.ListDetail"
+             Title="Student Entry"
+             NavigationPage.HasNavigationBar="True"
+             >
+    <ContentPage.Content>
+        <StackLayout  BackgroundColor="Black">
+            <StackLayout BackgroundColor="White">
+                <Label Text="Registration" TextColor="DarkBlue" HorizontalOptions="CenterAndExpand" FontSize="30"/>
+                <Entry  x:Name="Name" Keyboard="Text" Placeholder="Name" />
+                <Entry  x:Name="FatherName" Keyboard="Text" Placeholder="FatherName" />
+                <Entry  x:Name="Address" Keyboard="Text" Placeholder="Address" />
+                <!-- <Entry  x:Name="Class" Keyboard="Text" Placeholder="Class" /> -->
+                <DatePicker x:Name="Dob" Date="{x:Static sys:DateTime.Today}"  />
+                <Button Text="Add" BackgroundColor="Crimson" TextColor="White" HorizontalOptions="Center" BorderRadius="30" BorderColor="Orange" WidthRequest="200" Clicked="Button_OnClicked"/>
+               
+                <!-- <Label Text="Saved Note" VerticalOptions="End"></Label> -->
+                <!-- <ListView VerticalOptions="EndAndExpand" x:Name="mylistview"> -->
+                <!--     <ListView.ItemTemplate> -->
+                <!--         <DataTemplate> -->
+                <!--             <TextCell Text="{Binding Name}"></TextCell> -->
+                <!--         </DataTemplate> -->
+                <!--     </ListView.ItemTemplate> -->
+                <!-- </ListView> -->
 
-    <StackLayout>
-        <Label  Text="{Binding Name}"/>
-        <Label  Text="{Binding FatherName}" />
-        <Label  Text="{Binding Address}" />
-        <Label  Text="{Binding dateofBirth,StringFormat='{0:dd-MM-yyyy}'}" />
-        <Button Text="Back" Clicked="Button_OnClicked"/>
-    </StackLayout>
+                <!-- <ListView VerticalOptions="EndAndExpand" x:Name="mylistview"  HeightRequest="170"> -->
+                <!--     <ListView.ItemTemplate> -->
+                <!--         <DataTemplate> -->
+                <!--             <ViewCell> -->
+                <!--                 <Grid Padding="10,5"> -->
+                <!--                     <Grid.ColumnDefinitions> -->
+                <!--                         <ColumnDefinition Width="*" /> -->
+                <!--                         <ColumnDefinition Width="*" /> -->
+                <!--                     </Grid.ColumnDefinitions> -->
+                <!--                     <Grid.RowDefinitions> -->
+                <!--                         <RowDefinition Height="20" /> -->
+                <!--                         <RowDefinition Height="20" /> -->
+                <!--                     </Grid.RowDefinitions> -->
+                <!--                     <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" Text="{Binding Name}" FontSize="10" TextColor="Black"/> -->
+                <!--                     <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End" Text="{Binding FatherName}"  TextColor="Black" FontSize="10"></Label> -->
+                <!--                     <Label Grid.Row="1" Grid.Column="0" Text="{Binding Address}" HorizontalTextAlignment="Start" TextColor="Black" FontSize="10"/> -->
+                <!--                     <Label Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="End"  Text="{Binding dateofBirth, StringFormat='{0:dd-MM-yyyy}'}" FontSize="10"/> -->
+                <!--                 </Grid> -->
+                <!--             </ViewCell> -->
+                <!--         </DataTemplate> -->
+                <!--     </ListView.ItemTemplate> -->
+                <!-- </ListView> -->
 
-    
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+    <!-- <StackLayout   -->
+     <!--     -->
+     <!--     Orientation="Vertical"           -->
+     <!--     VerticalOptions="StartAndExpand"  -->
+     <!--     HorizontalOptions="Center"  -->
+     <!--     >  -->
+     <!--       -->
+     <!--     <Entry Keyboard="Text" Placeholder="Name" />  -->
+     <!--     <Entry Keyboard="Text" Placeholder="FatherName" />  -->
+     <!--     <Entry Keyboard="Text" Placeholder="Address" />  -->
+     <!--     <Entry Keyboard="Text" Placeholder="Class" />  -->
+     <!--     <DatePicker Date="{x:Static sys:DateTime.Today}"  Format="d MMM yyyy"  />  -->
+     <!-- </StackLayout>  -->
+
+
 </ContentPage>

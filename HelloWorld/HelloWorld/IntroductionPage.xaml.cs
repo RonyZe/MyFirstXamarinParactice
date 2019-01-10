@@ -19,8 +19,8 @@ namespace HelloWorld
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-//            await Navigation.PopAsync();
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
+//            await Navigation.PopModalAsync();
         }
 
         protected override bool OnBackButtonPressed()

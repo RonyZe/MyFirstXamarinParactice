@@ -11,15 +11,20 @@ namespace HelloWorld
         {
             InitializeComponent();
 
-//             MainPage = new NavigationPage (new WelcomePage()){BarBackgroundColor=Color.BlanchedAlmond,BarTextColor=Color.Black};
+            //             MainPage = new NavigationPage (new WelcomePage()){BarBackgroundColor=Color.BlanchedAlmond,BarTextColor=Color.Black};
 
-//             MainPage = new NavigationPage(new ContactsPage());
+            //             MainPage = new NavigationPage(new ContactsPage());
 
-//            MainPage = new ContactsPage();
+            MainPage = new ContactsPage();
 
-            MainPage = new MainPage();
-//           MainPage = new ListDetail (new ImagePage());
-//           MainPage = new ImagePage();
+            //            MainPage = new NavigationPage(new MainPage());
+            //            MainPage = new MainPage();
+            //           MainPage = new ListDetail (new ImagePage());
+
+//            MainPage = new ContextActions();
+
+            MainPage = new NavigationPage (new ImagePage());
+//            MainPage = new ListDetail();
 
         }
 
